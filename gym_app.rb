@@ -10,7 +10,7 @@
 
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require_relative('controllers/members_controller')
+require_relative('controllers/members_controller.rb')
 
 get '/' do
   erb( :index )

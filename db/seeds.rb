@@ -1,5 +1,6 @@
 require_relative( "../models/members.rb" )
 require_relative( "../models/gym_classes.rb" )
+require_relative( "../models/gym_class_members.rb" )
 require("pry-byebug")
 
 GymClass.delete_all()
@@ -37,11 +38,26 @@ member4 = Member.new({
 
   gym_class1 =GymClass.new({
     "class_name" => "Spin",
-    "price" => 12,
-    "member_id" => member2.id
+    "price" => 12
     })
 
-    gym_class1.save
+      gym_class1.save
+
+  gym_class2 =GymClass.new({
+    "class_name" => "Body Pump",
+    "price" => 15
+    })
+
+      gym_class2.save
+
+  gym_class3 =GymClass.new({
+    "class_name" => "Zumba",
+    "price" => 10
+    })
+
+      gym_class3.save
+
+
 
 binding.pry
 nil

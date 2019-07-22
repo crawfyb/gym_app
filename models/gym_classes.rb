@@ -8,7 +8,6 @@ class GymClass
     @id = options['id'].to_i if options['id']
     @class_name = options['class_name']
     @price = options['price'].to_i
-    @member_id = options ['member_id'].to_i
   end
 
 
@@ -16,17 +15,24 @@ def save()
   sql = "INSERT INTO gym_classes
   (
     class_name,
-    price,
-    member_id
+    price
     )
     VALUES
     (
-    $1, $2, $3
+    $1, $2
   )
   RETURNING id"
-  values = [@class_name, @price, @member_id]
+  values = [@class_name, @price]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
+end
+
+def members()
+  sql = "SELECT members.* FROM members INNER JOIN gym_classes on gym_classes.member_id = members.id
+  WHERE gym_classes.id = $1 "
+  values = [@id]
+  result = SqlRunner.run(sql, values)
+  return result.map{|member| Member.new(member)}
 end
 
 def self.all

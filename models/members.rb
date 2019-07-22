@@ -29,6 +29,14 @@ def save()
     @id = results.first()['id'].to_i
   end
 
+  def gym_classes()
+    sql = "SELECT gym_classes.* FROM gym_classes INNER JOIN gym_class_members on gym_class_members.gym_class_id = gym_classes.id
+    WHERE members.id = $1 "
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    return result.map{|gym_class| GymClass.new(gym_class)}
+  end
+
   def self.all
     sql = "SELECT * FROM members"
     return SqlRunner.run(sql).map {|member| Member.new(member)}
