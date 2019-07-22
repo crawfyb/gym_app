@@ -1,0 +1,10 @@
+body {
+  background: purple url('/images/fitnessf-background-14.jpg');
+  background-size: 100%;
+  background-position: : right;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
+}

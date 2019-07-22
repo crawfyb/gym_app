@@ -1,0 +1,5 @@
+<% @members.each do |member| %>
+<p>Name: <%= member.pretty_name() %> </p>
+<p><a href="/members/<%=member.id %>">Show Member</a></p>
+<hr />
+<%end%>
