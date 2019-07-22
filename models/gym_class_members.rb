@@ -1,6 +1,6 @@
 require_relative('../db/sql_runner')
 
-class GymClassMembers
+class GymClassMember
     attr_reader(:member_id, :gym_class_id, :id)
 
 
@@ -32,7 +32,7 @@ def gym_class_members()
   WHERE gym_classes.id = $1 "
   values = [@id]
   result = SqlRunner.run(sql, values)
-  return result.map{|gym_class_members| GymClassMembers.new(gym_class_members)}
+  return result.map{|gym_class_members| GymClassMember.new(gym_class_members)}
 end
 
 def self.all()

@@ -57,6 +57,48 @@ member4 = Member.new({
 
       gym_class3.save
 
+      gym_class_members1 = GymClassMembers.new({
+        "member_id" => member1.id,
+        "gym_class_id" => gym_class3.id
+        })
+
+        gym_class_members1.save()
+
+      gym_class_members2 = GymClassMembers.new({
+        "member_id" => member2.id,
+        "gym_class_id" => gym_class3.id
+        })
+
+        gym_class_members2.save()
+
+      gym_class_members3 = GymClassMembers.new({
+        "member_id" => member4.id,
+        "gym_class_id" => gym_class3.id
+        })
+
+        gym_class_members3.save()
+
+      gym_class_members4 = GymClassMembers.new({
+        "member_id" => member1.id,
+        "gym_class_id" => gym_class2.id
+        })
+
+        gym_class_members4.save()
+
+      gym_class_members5 = GymClassMembers.new({
+        "member_id" => member2.id,
+        "gym_class_id" => gym_class2.id
+        })
+
+        gym_class_members5.save()
+
+      gym_class_members6 = GymClassMembers.new({
+        "member_id" => member3.id,
+        "gym_class_id" => gym_class1.id
+        })
+
+        gym_class_members6.save()
+
 
 
 binding.pry
