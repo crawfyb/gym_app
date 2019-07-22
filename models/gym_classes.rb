@@ -28,8 +28,9 @@ def save()
 end
 
 def members()
-  sql = "SELECT members.* FROM members INNER JOIN gym_classes on gym_classes.member_id = members.id
-  WHERE gym_classes.id = $1 "
+  sql = "SELECT members.* FROM members
+  INNER JOIN gym_class_members on gym_class_members.member_id = members.id
+  WHERE gym_class_members.gym_class_id = $1 "
   values = [@id]
   result = SqlRunner.run(sql, values)
   return result.map{|member| Member.new(member)}

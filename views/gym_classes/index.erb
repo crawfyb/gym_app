@@ -1,0 +1,17 @@
+<h1>Fitness Classes</h1>
+
+<table>
+<tr>
+  <th>Class</th>
+  <th></th>
+  <th>Day</th>
+  <th></th>
+  <th>Time</th>
+</tr>
+<% @gym_classes.each do |gym_class| %>
+<tr>
+  <td><a href="/classes/<%=gym_class.id%>"><%=gym_class.name%></a></td>
+  <td>|</td>
+</tr>
+<%end%>
+</table>

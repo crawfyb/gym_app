@@ -24,7 +24,7 @@ post '/classes' do
 end
 
 #edit
-get '/pizza-classes/:id/edit' do
+get '/classes/:id/edit' do
   @gym_class = GymClass.find(params[:id])
   erb(:"gymclasses/edit")
 end

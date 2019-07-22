@@ -4,17 +4,16 @@ class GymClassMember
     attr_reader(:member_id, :gym_class_id, :id)
 
 
-def initialize
+def initialize(options)
   @id = options['id'].to_i if options['id']
-@member_id = options ['member_id'].to_i
-@gym_class = options ['gym_class_id'].to_i
+@member_id = options['member_id'].to_i
+@gym_class = options['gym_class_id'].to_i
 end
 
 def save()
   sql = "INSERT INTO gym_class_members
   (
     member_id,
-    price,
     gym_class_id
     )
     VALUES
