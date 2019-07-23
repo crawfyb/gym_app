@@ -32,5 +32,5 @@ end
 #edit
 get '/classes/:id/edit' do
   @gym_classes = GymClass.find(params[:id])
-  erb(:"gymclasses/edit")
+  erb(:"gym_classes/edit")
 end
