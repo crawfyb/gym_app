@@ -10,6 +10,11 @@ get '/classes' do
   erb ( :"gym_classes/index" )
 end
 
+# new
+get '/classes/new' do
+  erb(:"gym_classes/new")
+end
+
 
 # show
 get '/classes/:id' do
