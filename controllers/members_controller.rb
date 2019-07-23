@@ -24,10 +24,10 @@ end
 post '/members' do
   @members = Member.new(params)
   @members.save()
-  erb(:members)
+  erb(:"members/create")
 end
 
 post '/members/:id/delete' do
-  @members = Member.delete(params[:id])
+  Member.destroy(params[:id])
   redirect('/members')
 end
