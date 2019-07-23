@@ -6,25 +6,32 @@ also_reload( '../models/*' )
 
 # index
 get '/classes' do
-  @gym_class = GymClass.all()
+  @gym_classes = GymClass.all()
   erb ( :"gym_classes/index" )
+end
+
+# new
+get '/classes/new' do
+  @gym_classes = GymClass.all
+  @members = Member.all
+  erb(:"gym_classes/new")
 end
 
 # show
 get '/classes/:id' do
-  @gym_class = GymClass.find(params['id'].to_i)
+  @gym_classes = GymClass.find(params['id'].to_i)
   erb( :"gym_classes/show" )
 end
 
 # create
 post '/classes' do
-  @gym_class = GymClass.new(params)
-  @gym_class.save()
+  @gym_classes = GymClass.new(params)
+  @gym_classes.save()
   erb(:"gym_classes/create")
 end
 
 #edit
 get '/classes/:id/edit' do
-  @gym_class = GymClass.find(params[:id])
+  @gym_classes = GymClass.find(params[:id])
   erb(:"gymclasses/edit")
 end
