@@ -1,5 +1,9 @@
 <% @members.each do |member| %>
 <p>Name: <%= member.pretty_name() %> </p>
 <p><a href="/members/<%=member.id %>">View details</a></p>
+
+
+<button type="submit" >Delete</button>
+
 <hr />
 <%end%>
