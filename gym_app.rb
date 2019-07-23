@@ -12,3 +12,10 @@ end
 get '/new' do
   erb(:new)
 end
+
+# new
+get '/classes/new' do
+  @gym_classes = GymClass.all
+  @members = Member.all
+  erb(:"gym_classes/new")
+end

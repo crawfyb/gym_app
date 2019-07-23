@@ -10,12 +10,6 @@ get '/classes' do
   erb ( :"gym_classes/index" )
 end
 
-# new
-get '/classes/new' do
-  @gym_classes = GymClass.all
-  @members = Member.all
-  erb(:"gym_classes/new")
-end
 
 # show
 get '/classes/:id' do

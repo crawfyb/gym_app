@@ -29,6 +29,21 @@ def save()
     @id = results.first()['id'].to_i
   end
 
+  def update()
+  sql = "UPDATE members
+  SET
+  (
+    first_name,
+    last_name
+  ) =
+  (
+    $1, $2
+  )
+  WHERE id = $3"
+  values = [@first_name, @last_name, @id]
+  SqlRunner.run( sql, values )
+end
+
   def gym_classes()
     sql = "SELECT gym_classes.* FROM gym_classes INNER JOIN gym_class_members on gym_class_members.gym_class_id = gym_classes.id
     WHERE members.id = $1 "

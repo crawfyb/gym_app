@@ -27,8 +27,21 @@ post '/members' do
   erb(:"members/create")
 end
 
+# delete
 post '/members/:id/delete' do
   Member.destroy(params['id'].to_i)
-  # p Member.find(params['id'])
   redirect('/members')
+end
+
+# edit
+get '/members/:id/edit' do
+  @members = Member.find(params[:id])
+  erb(:'members/edit')
+end
+
+# update
+post '/members/:id' do
+  Member.new(params).update
+  redirect('/members')
+
 end
