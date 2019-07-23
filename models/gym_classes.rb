@@ -10,6 +10,9 @@ class GymClass
     @price = options['price'].to_i
   end
 
+def name()
+  return @class_name
+end
 
 def save()
   sql = "INSERT INTO gym_classes

@@ -1,15 +1,15 @@
 <h1>Fitness Classes</h1>
 
-<table>
-<tr>
-  <th>Class</th>
-  <th></th>
-
-</tr>
 <% @gym_classes.each do |gym_class| %>
-<tr>
-  <td><a href="/classes/<%=gym_class.id%>"><%=gym_class.class_name%></a></td>
-  
-</tr>
+
+<div class="gym_class">
+  <p>Class: <%= gym_class.name() %> </p>
+  <p><a href="/classes/<%=gym_class.id%>">View Details</a></p>
+  <p><a href="/classes/<%=gym_class.id%>/edit">Edit Class</a></p>
+  <form action="/classes/<%=gym_class.id%>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete class" />
+  </form>
+  <hr />
+</div>
+
 <%end%>
-</table>
