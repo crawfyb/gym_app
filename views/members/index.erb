@@ -1,9 +1,12 @@
 <% @members.each do |member| %>
-<p>Name: <%= member.pretty_name() %> </p>
-<p><a href="/members/<%=member.id %>">View details</a></p>
 
+<div class="member">
+  <p>Name: <%= member.pretty_name() %> </p>
+  <p><a href="/members/<%=member.id%>">View details</a></p>
+  <form action="/members/<%=member.id%>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete member" />
+  </form>
+  <hr />
+</div>
 
-<button type="submit" >Delete</button>
-
-<hr />
 <%end%>

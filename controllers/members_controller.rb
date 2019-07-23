@@ -28,6 +28,7 @@ post '/members' do
 end
 
 post '/members/:id/delete' do
-  Member.destroy(params[:id])
+  Member.destroy(params['id'].to_i)
+  # p Member.find(params['id'])
   redirect('/members')
 end
