@@ -44,7 +44,7 @@ end
 
 # update
 post '/classes/:id' do
-  Gym.new(params).update
-  redirect('/members')
+  GymClass.new(params).update
+  redirect('/classes')
 
 end

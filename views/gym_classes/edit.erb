@@ -1,16 +1,15 @@
 
-<form action="/classes/<%= @gym_class.id %>"method="post">
-<label for="class_name">Class:</label>
-<input type="text" value="<%= @gym_class.class_name %>" name="class_name" id="class_name">
+<form action="/classes/<%= @gym_classes.id %>"method="post">
+
 
 <label for="price">Cost:</label>
-<input type="integer" value="<%= @gym_class.price %>" name="price" id="price">
+<input type="integer" value="<%= @gym_classes.price %>" name="price" id="price">
 
 <label for="classes">Select Class</label>
 <select id="pizza-select" name="class_name">
-  <option <%= @gym_class.class_name == 'Spin' ? 'selected' : '' %> value="Spin">Spin</option>
-  <option <%= @gym_class.class_name == 'Body Pump' ? 'selected' : '' %> value="Body Pump">Body Pump</option>
-  <option <%= @gym_class.class_name == 'Zumba' ? 'selected' : '' %> value="Zumba">Zumba</option>
+  <option <%= @gym_classes.class_name == 'Spin' ? 'selected' : '' %> value="Spin">Spin</option>
+  <option <%= @gym_classes.class_name == 'Body Pump' ? 'selected' : '' %> value="Body Pump">Body Pump</option>
+  <option <%= @gym_classes.class_name == 'Zumba' ? 'selected' : '' %> value="Zumba">Zumba</option>
   </select>
 
 
