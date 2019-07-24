@@ -1,5 +1,5 @@
-/* body {
-  background: purple url('/images/fitnessf-background-14.jpg');
+body {
+  background: url('/images/fitnessf-background-14.jpg');
   background-size: 100%;
   background-position: : right;
   background-repeat: no-repeat;
@@ -7,4 +7,62 @@
   font-family: 'Merriweather', serif;
   padding: 0px;
   margin: 0px;
+}
+
+
+
+a, a:link, a:visited {
+  color: white;
+
+}
+a:hover, a:active, a:focus {
+  color: yellow;
+}
+
+
+div {
+  
+}
+/* nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+}
+
+
+nav ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+main {
+  padding: 25px;
+}
+
+nav {
+  color: white;
+}
+
+body {
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+    color: white;
+}
+
+#content {
+  border-left: 1px solid darkred;
+  padding-left: 25px;
 } */
