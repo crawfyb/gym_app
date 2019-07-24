@@ -72,4 +72,12 @@ def self.delete_all()
   SqlRunner.run( sql )
 end
 
+def self.destroy(id)
+  sql = "DELETE FROM gym_classes
+  WHERE id = $1"
+  values = [id]
+  SqlRunner.run(sql, values)
+end
+
+
 end
