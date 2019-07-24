@@ -1,21 +1,12 @@
 <form action="/classes" method="post">
-<label>
-  Select a Member:
-  <select name="member_id">
-    <% for member in @members %>
-    <option value="<%= member.id %>"><%= member.pretty_name %></option>
-    <%end%>
-  </select>
-</label>
+
+<label for="class-name">Class Name:</label>
+<input type="text" name="class_name" >
 
 <label>
-Select a Class:
-<select name="gym_class_id">
-  <% for gym_class in @gym_classes %>
-  <option value="<%= gym_class.id %>"> <%= gym_class.class_name %> </option>
-  <%end%>
 
-</select>
+<label for="price">Price:</label>
+<input type="text" name="price" >
 </label>
-<input class="btn btn--action" type="submit" value="Join Class">
+<input class="btn btn--action" type="submit" value="Create Class">
 </form>

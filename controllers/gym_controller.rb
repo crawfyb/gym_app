@@ -20,6 +20,13 @@ get '/gym/new' do
   erb(:"gym/new")
 end
 
+# show
+get '/gym/:id' do
+  @gym = GymClassMember.find(params['id'].to_i)
+  erb(:"gym/show")
+end
+
+
 # create
 post '/gym' do
   @gym = GymClassMember.new(params)

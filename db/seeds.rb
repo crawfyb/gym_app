@@ -3,9 +3,9 @@ require_relative( "../models/gym_classes.rb" )
 require_relative( "../models/gym_class_members.rb" )
 require("pry-byebug")
 
-# GymClass.delete_all()
-# GymClassMember.delete_all()
-# Member.delete_all()
+GymClass.delete_all()
+GymClassMember.delete_all()
+Member.delete_all()
 
 
 member1 = Member.new({

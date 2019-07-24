@@ -12,9 +12,13 @@ end
 
 # new
 get '/classes/new' do
-  @members = Member.all
-  @gym_classes = GymClass.all
   erb(:"gym_classes/new")
+end
+
+# show
+get '/classes/:id' do
+  @gym_classes = GymClass.find(params['id'].to_i)
+  erb( :"gym_classes/show" )
 end
 
 # create
@@ -24,11 +28,7 @@ post '/classes' do
   erb(:"gym_classes/create")
 end
 
-# show
-get '/classes/:id' do
-  @gym_classes = GymClass.find(params['id'].to_i)
-  erb( :"gym_classes/show" )
-end
+
 
 # delete
 post '/classes/:id/delete' do

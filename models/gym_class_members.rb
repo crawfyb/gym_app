@@ -7,7 +7,7 @@ class GymClassMember
 def initialize(options)
   @id = options['id'].to_i if options['id']
 @member_id = options['member_id'].to_i
-@gym_class = options['gym_class_id'].to_i
+@gym_class_id = options['gym_class_id'].to_i
 end
 
 def save()
@@ -41,11 +41,19 @@ def self.all()
 end
 
 def member()
-  sql = "SELECT * FROM members
+  sql = "SELECT * FROM gym_class_members
   WHERE id = $1"
   values = [@member_id]
   results = SqlRunner.run( sql, values )
   return Member.new( results.first )
+end
+
+def self.find(id)
+  sql = "SELECT * FROM gym_class_members
+  WHERE id = $1"
+  values = [id]
+  results = SqlRunner.run(sql, values)
+  return GymClassMember.new(results.first)
 end
 
 def gym_class()
