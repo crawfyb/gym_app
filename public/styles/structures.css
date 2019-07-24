@@ -1,18 +1,26 @@
-body {
+body, html {
   background: url('/images/fitnessf-background-14.jpg');
-  background-size: 100%;
-  background-position: : right;
-  background-repeat: no-repeat;
+  background-size: cover;
   color: papayawhip;
   font-family: 'Merriweather', serif;
   padding: 0px;
   margin: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
+h1 {
+  color: white;
+  text-align: center;
+
+}
 
 a, a:link, a:visited {
   color: white;
+  text-align: center;
 
 }
 a:hover, a:active, a:focus {
@@ -20,9 +28,14 @@ a:hover, a:active, a:focus {
 }
 
 
-div {
-  
+div.member, div.gym_class, li.register {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
 }
+}
+
+
 /* nav {
   padding: 0px;
   margin: 0px;

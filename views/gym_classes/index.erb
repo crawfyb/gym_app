@@ -1,12 +1,12 @@
 <h1>Fitness Classes</h1>
-<li>
-  <a href="/gym">Class Register Table</a>
+<li class="register" style="line-height: 80px">
+  <a  href="/gym">Class Register Table</a>
 </li>
 
 <% @gym_classes.each do |gym_class| %>
 
-<div class="gym_class">
-  <p>Class: <%= gym_class.name() %> </p>
+<div style="padding-top: 30px;" class="gym_class">
+  <p >Class: <%= gym_class.name() %> </p>
   <p>Price: <%= gym_class.price() %> </p>
   <p><a href="/classes/<%=gym_class.id%>">View Details</a></p>
   <p><a href="/classes/<%=gym_class.id%>/edit">Edit Class</a></p>

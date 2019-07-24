@@ -1,0 +1,27 @@
+td, th {
+  text-align: left;
+  Align: center;
+  color: white;
+}
+
+td {
+  padding: 10px 20px 0px 0px;
+  Align: center;
+  color: white;
+}
+
+th {
+  padding: 0px 20px 10px 0px;
+  border-bottom: 1px solid papayawhip;
+  Align: center;
+}
+
+table {
+  border-collapse: collapse;
+  Align: center;
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
+}
