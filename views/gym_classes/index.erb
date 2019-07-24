@@ -4,6 +4,7 @@
 
 <div class="gym_class">
   <p>Class: <%= gym_class.name() %> </p>
+  <p>Price: <%= gym_class.price() %> </p>
   <p><a href="/classes/<%=gym_class.id%>">View Details</a></p>
   <p><a href="/classes/<%=gym_class.id%>/edit">Edit Class</a></p>
   <form action="/classes/<%=gym_class.id%>/delete" method="POST">

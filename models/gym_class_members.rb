@@ -37,7 +37,7 @@ end
 def self.all()
   sql = "SELECT * FROM gym_class_members"
   results = SqlRunner.run( sql )
-  return results.map { |gym_class_members| GymClassMembers.new( gym_class_members ) }
+  return results.map { |gym_class_members| GymClassMember.new( gym_class_members ) }
 end
 
 def member()
