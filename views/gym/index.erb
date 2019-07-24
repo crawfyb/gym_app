@@ -1,9 +1,23 @@
-<% @gym.each do |gym_class_member|%>
-<p><%= gym_class_member.id  %></p>
+<h1>This weeks Classes</h1>
 
-<% @gym_classes.each do |gym_class|%>
-<p><%= gym_class.id  %></p>
+<table>
+  <tr>
 
-<% @members.each do |member|%>
-<p><%= member.id  %></p>
-<%end%>
+
+  <th>Class</th>
+  <th>Member</th>
+
+</tr>
+
+
+
+  <% @gym.each do |gym_class_member|%>
+  <tr>
+    <td><%= gym_class_member.gym_class.class_name  %></td>
+    <td><%= gym_class_member.member.pretty_name %></td>
+
+  </tr>
+  <% end %>
+
+
+</table>

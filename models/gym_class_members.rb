@@ -41,7 +41,7 @@ def self.all()
 end
 
 def member()
-  sql = "SELECT * FROM gym_class_members
+  sql = "SELECT * FROM members
   WHERE id = $1"
   values = [@member_id]
   results = SqlRunner.run( sql, values )
